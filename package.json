@@ -1,0 +1,15 @@
+{
+  "name": "bootstrap-assignment",
+  "version": "1.0.0",
+  "description": "Created by Nabin & Aaditya ",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "keywords": [],
+  "author": "Nabin",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

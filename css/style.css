@@ -1,3 +1,5 @@
+/* Override the default bootstrap */
+
 :root {
     --color-accent: #3751FF;
     --color-grayscale: #9FA2B4;
@@ -5,16 +7,25 @@
     --color-grayscale-divider: #DFE0EB;
     --color-gray-dark-text: #A4A6B3;
     --color-gray-light-text: #DDE2FF;
-
+    --color-primary-bg: #F7F8FC;
 
 }
 
-main div ul li a svg {
+main aside ul li a svg {
     fill: white;
 
 }
 
-main div:first-child a span {
+main aside:first-child a span {
     color: var(--color-gray-dark-text);
     font-weight: bold;
+}
+
+aside {
+    width: 255px;
+    height: 100vh;
+}
+
+#nav-links {
+    margin-top: 60px;
 }

@@ -29,3 +29,9 @@ aside {
 #nav-links {
     margin-top: 60px;
 }
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+}

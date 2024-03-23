@@ -1,2 +1,2 @@
 # Admin Dashboard Responsive UI
-## Built using Bootstrap, HTML, CSS & JS
+## Built using Bootstrap 5

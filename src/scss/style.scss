@@ -1,4 +1,61 @@
 // Variable overrides
-$primary: red;
-
+$primary: #3751FF;
+$color-gray-dark-text: #9FA2B4;
+$color-gray-dark-bg: #DDE2FF;
+$font-family-sans-serif: "Mulish", sans-serif;
+$nav-pills-link-active-bg: rgba($color-gray-dark-text, 0.08);
+$nav-link-color: #A4A6B3;
+$nav-pills-active-color: $color-gray-dark-bg;
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+
+
+
+#logo {
+    padding: 40px 10px 0px 10px;
+}
+
+.logo-title {
+    color: var(--color-gray-dark-text);
+    font-weight: bold;
+    margin-right: 40px;
+}
+
+aside {
+    width: max-content !important;
+    height: 100vh;
+    padding: unset !important;
+}
+
+aside .nav-pills .nav-link {
+    border-radius: 0;
+    padding: 18px 20px;
+    position: relative;
+}
+
+
+aside .nav-pills .nav-link.active::before {
+    position: absolute;
+    display: inline-block;
+    width: 3px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    content: "";
+    background-color: $color-gray-dark-bg;
+}
+
+.sidebar.collapsed span {
+    display: none !important;
+    margin-right: unset;
+}
+
+#nav-links {
+    margin-top: 60px;
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+}

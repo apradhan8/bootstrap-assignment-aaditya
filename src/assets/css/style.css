@@ -11924,4 +11924,13 @@ aside .nav-pills .nav-link.active::before {
   display: flex;
 }
 
+.column {
+  flex: 1;
+  margin-right: 25px;
+}
+
+.column:last-child {
+  margin-right: 0;
+}
+
 /*# sourceMappingURL=style.css.map */

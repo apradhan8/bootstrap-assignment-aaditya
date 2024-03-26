@@ -97,15 +97,4 @@ aside .nav-pills .nav-link.active::before {
     display: flex; 
 }
 
-.column {
-    flex: 1;
-    padding: 10px; 
-    border: 1px solid #ccc;
-}
 
-.inner-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    // height: 100%;
-}

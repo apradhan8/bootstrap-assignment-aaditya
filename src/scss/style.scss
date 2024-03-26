@@ -6,14 +6,13 @@ $font-family-sans-serif: "Mulish", sans-serif;
 $nav-pills-link-active-bg: rgba($color-gray-dark-text, 0.08);
 $nav-link-color: #A4A6B3;
 $nav-pills-active-color: $color-gray-dark-bg;
+$nav-link-hover-color: $color-gray-dark-bg;
+$text-secondary: $color-gray-dark-text;
+
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 
-
-
-#logo {
-    padding: 40px 10px 0px 10px;
-}
+$bg-dark: #363740;
 
 .logo-title {
     color: var(--color-gray-dark-text);
@@ -23,16 +22,29 @@ $nav-pills-active-color: $color-gray-dark-bg;
 
 aside {
     width: max-content !important;
-    height: 100vh;
+    height: 100%;
     padding: unset !important;
+    background-color: $bg-dark;
+    position: fixed;
+    max-width: 255px;
+    z-index: 1;
 }
 
 aside .nav-pills .nav-link {
     border-radius: 0;
     padding: 18px 20px;
     position: relative;
+    color: $nav-link-color;
+    fill: $color-gray-dark-text;
 }
 
+aside .nav-pills .nav-link.active {
+    fill: $nav-pills-active-color;
+}
+
+aside .nav-pills .nav-link.active svg {
+    fill: $color-gray-dark-bg !important;
+}
 
 aside .nav-pills .nav-link.active::before {
     position: absolute;
@@ -45,6 +57,7 @@ aside .nav-pills .nav-link.active::before {
     background-color: $color-gray-dark-bg;
 }
 
+
 .sidebar.collapsed span {
     display: none !important;
     margin-right: unset;
@@ -54,8 +67,27 @@ aside .nav-pills .nav-link.active::before {
     margin-top: 60px;
 }
 
+
 .avatar {
     width: 44px;
     height: 44px;
     object-fit: cover;
+}
+
+.content {
+    margin-left: 16.67%;
+}
+
+.content.collapsed {
+    margin-left: 10%;
+}
+
+.card {
+    max-width: 258px;
+    max-height: 134px;
+}
+
+.chart {
+    width: 50%;
+    height: 50%;
 }

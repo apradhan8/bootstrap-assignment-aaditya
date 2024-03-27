@@ -4,8 +4,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const expandButton = document.getElementById('logo-btn');
     const sidebarLinks = document.querySelectorAll('.nav-link');
     const mainContent = document.querySelector('.content');
+    const mediaQuery = window.matchMedia('(min-width: 765px)');
+    const mediaQuery2 = window.matchMedia('(max-width: 768px)');
 
+    // Collapse sidebar on small screens
 
+    // Add active class to clicked sidebar link
     sidebarLinks.forEach(function (link) {
         link.addEventListener('click', function () {
             sidebarLinks.forEach(function (otherLink) {
@@ -17,12 +21,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     })
 
-
-    expandButton.addEventListener('click', function () {
+    if (mediaQuery2.matches) {
         sidebar.classList.toggle('collapsed');
         mainContent.classList.toggle('collapsed');
+    }
+    // Expand sidebar 
+    expandButton.addEventListener('click', function () {
+        if (mediaQuery.matches) {
+            sidebar.classList.toggle('collapsed');
+            mainContent.classList.toggle('collapsed');
+        }
+
     });
 
+    // Apex Charts
     var options = {
         series: [{
             name: "Today",
@@ -166,9 +178,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
     };
-
     var chart = new ApexCharts(document.querySelector(".chart"), options);
-
     chart.render();
 
 

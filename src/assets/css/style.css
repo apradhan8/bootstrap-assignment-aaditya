@@ -11884,7 +11884,7 @@ aside .nav-pills .nav-link.active:before {
   background-color: #DDE2FF;
 }
 
-aside .nav-pills .nav-link.active .sidebar.collapsed span {
+.sidebar.collapsed span {
   display: none !important;
   margin-right: unset;
 }
@@ -11899,28 +11899,22 @@ aside .nav-pills .nav-link.active .sidebar.collapsed span {
   object-fit: cover;
 }
 
-.content {
-  margin-left: 16.67%;
+@media screen and (min-width: 768px) {
+  .md-mx-6 {
+    margin-left: 16.67% !important;
+  }
 }
-
 .content.collapsed {
-  margin-left: 10%;
+  margin-left: 10% !important;
 }
 
 .card {
-  flex: 1;
-  max-width: 258px;
-  max-height: 134px;
+  width: 100%;
+  flex-wrap: wrap;
+  max-width: 258px !important;
+  max-height: 134px !important;
 }
 
-.chart {
-  width: 50%;
-  height: 50%;
-}
-
-.column {
-  flex: 1;
-}
 .column:last-child {
   margin-right: 0;
 }
@@ -11937,6 +11931,14 @@ aside .nav-pills .nav-link.active .sidebar.collapsed span {
 
 .table {
   margin-bottom: 0;
+}
+
+.chart {
+  width: 100%;
+}
+
+.chart-wrapper {
+  width: calc(100% - 40px) !important;
 }
 
 /*# sourceMappingURL=style.css.map */

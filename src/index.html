@@ -104,7 +104,7 @@
               </defs>
               <use xlink:href="#logo" />
             </svg>
-            <span class="fs-5 logo-title d-none d-sm-inline-block links">Dashboard Kit</span>
+            <span class="fs-5 logo-title d-none d-md-inline-block links">Dashboard Kit</span>
           </a>
           <ul class="nav nav-pills flex-column mb-auto" id="nav-links">
             <li class="nav-item">
@@ -112,7 +112,7 @@
                 <svg class="bi pe-none me-2" width="16" height="16">
                   <use xlink:href="#overview" />
                 </svg>
-                <span class="d-none d-sm-inline-block">Overview</span>
+                <span class="d-none d-md-inline-block">Overview</span>
               </a>
             </li>
             <li>
@@ -120,7 +120,7 @@
                 <svg class="bi pe-none me-2" width="16" height="16">
                   <use xlink:href="#tickets" />
                 </svg>
-                <span class="d-none d-sm-inline-block">Tickets</span>
+                <span class="d-none d-md-inline-block">Tickets</span>
               </a>
             </li>
             <li>
@@ -128,7 +128,7 @@
                 <svg class="bi pe-none me-2" width="16" height="16">
                   <use xlink:href="#ideas" />
                 </svg>
-                <span class="d-none d-sm-inline-block">Ideas</span>
+                <span class="d-none d-md-inline-block">Ideas</span>
               </a>
             </li>
             <li>
@@ -136,7 +136,7 @@
                 <svg class="bi pe-none me-2" width="16" height="16">
                   <use xlink:href="#contacts" />
                 </svg>
-                <span class="d-none d-sm-inline-block">Contacts</span>
+                <span class="d-none d-md-inline-block">Contacts</span>
               </a>
             </li>
             <li>
@@ -144,7 +144,7 @@
                 <svg class="bi pe-none me-2" width="16" height="16">
                   <use xlink:href="#agents" />
                 </svg>
-                <span class="d-none d-sm-inline-block">Agents</span>
+                <span class="d-none d-md-inline-block">Agents</span>
               </a>
             </li>
             <li>
@@ -152,7 +152,7 @@
                 <svg class="bi pe-none me-2" width="16" height="16">
                   <use xlink:href="#articles" />
                 </svg>
-                <span class="d-none d-sm-inline-block">Articles</span>
+                <span class="d-none d-md-inline-block">Articles</span>
               </a>
             </li>
 
@@ -162,7 +162,7 @@
                 <svg class="bi pe-none me-2" width="16" height="16">
                   <use xlink:href="#settings" />
                 </svg>
-                <span class="d-none d-sm-inline-block">Settings</span>
+                <span class="d-none d-md-inline-block">Settings</span>
               </a>
             </li>
             <li>
@@ -170,18 +170,18 @@
                 <svg class="bi pe-none me-2" width="16" height="16">
                   <use xlink:href="#subscription" />
                 </svg>
-                <span class="d-none d-sm-inline-block">Subscription</span>
+                <span class="d-none d-md-inline-block">Subscription</span>
               </a>
             </li>
           </ul>
         </nav>
       </aside>
       <!-- Main content -->
-      <div class="col-xs-3 col-md-10 col-12 p-5  content ">
+      <div class="col-xs-3 col-md-10 col-12 p-5 mx-4 md-mx-6 content">
 
         <!-- nav with profile -->
         <div class="d-flex justify-content-between">
-          <h1 class="fs-4 fw-bold">Overview</h1>
+          <h1 class="fs-4 fw-bold ">Overview</h1>
           <div>
             <svg class="mx-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_584_242)">
@@ -210,7 +210,7 @@
         </div>
 
         <!-- statistics cards  -->
-        <div class="row mt-5  gap-5 p-3  ">
+        <div class="d-flex mt-5 flex-wrap justify-content-between gap-3 flex-md-row">
           <div class="card text-center bg-white">
             <div class="card-body">
               <h6 class="card-title fw-bold text-secondary ">Unresolved</h6>
@@ -238,22 +238,24 @@
         </div>
 
         <!-- chart and chart info -->
-        <section class="rounded-md border mt-3 d-flex flex-column flex-sm-row bg-white rounded">
+        <section class="w-100 rounded border mt-3 d-flex flex-column flex-lg-row justify-content-lg-between bg-white">
           <!-- chart -->
 
-          <div class="col-12 col-md-8 p-4">
+          <div class="p-4 py-md-5 chart-wrapper">
             <h5 class="fw-bold">Today's trends</h5>
             <p class="text-secondary"> as of 26th March 2024, 10:53AM</p>
-            <div class="chart w-100">
-
-            </div>
+            <!-- <div class="chart"> -->
+            <div class="chart"></div>
           </div>
 
           <!-- Chart info -->
-          <div class="hstack gap-5 ml-auto">
-            <div class="vr"></div>
-            <div class="d-flex p-2 gap-3 flex-sm-column">
-              <div class="card text-center ">
+          <div class="d-flex flex-column flex-lg-row justify-content-lg-between">
+            <!-- divider -->
+            <!-- <div class="vr d-none d-lg-block"></div> -->
+            <!-- info cards -->
+            <div class="w-50 d-flex flex-wrap p-2 gap-3 justify-content-center justify-content-md-start">
+
+              <div class="card text-center">
                 <div class="card-body">
                   <h6 class="card-title fw-bold text-secondary ">Resolved</h6>
                   <h4 class="fw-bold">449</h4>
@@ -287,15 +289,12 @@
                   <h4 class="fw-bold">94%</h4>
                 </div>
               </div>
-
-
-
             </div>
           </div>
         </section>
 
         <!-- Unresolved tickets and tasks -->
-        <section class="d-flex mt-4 justify-content-between gap-5">
+        <section class="d-flex mt-4 gap-5 flex-column flex-md-row">
           <div class="column">
             <!-- Unresolved Tickets -->
             <div class="pt-4 bg-white rounded border ">
@@ -362,7 +361,7 @@
 
           </div>
 
-          <!-- Tasks -->
+          <!-- Tasks Panel -->
           <div class="column detail-cards">
             <div class="pt-4 bg-white rounded border">
               <div class="d-flex px-3 pb-2 mb-2 justify-content-between border-bottom border-light">
@@ -399,46 +398,66 @@
                     </tr>
                     <tr>
                       <td class="py-3 px-4">
-                        <div class="d-flex align-items-center">
-                          <div>
-                            <p class="mb-0 fw-bold">Finish ticket update</p>
+                        <div class="">
+                          <div class="form-check d-flex align-items-center gap-3">
+                            <input class="form-check-input rounded-circle" type="checkbox" name="flexRadioDefault"
+                              id="flexRadioDefault1">
+                            <label class="form-check-label fw-bold" for="flexRadioDefault1">
+                              Finish ticket update
+                            </label>
+
                           </div>
                         </div>
                       </td>
-                      <td class="badge bg-warning text-white">URGENT</td>
+                      <td>
+                        <div class="badge bg-warning text-white">URGENT</div>
+                      </td>
                     </tr>
                     <tr>
                       <td class="py-3 px-4">
-                        <div class="d-flex align-items-center">
-                          <div>
-                            <p class="mb-0 fw-bold">Create new ticket example</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="fw-bold text-white badge bg-success align-middle">NEW</td>
-                    </tr>
-                    <tr class="border-bottom border-white">
-                      <td class="py-3 px-4">
-                        <div class="d-flex align-items-center">
-                          <div>
-                            <p class="mb-0 fw-bold">Update ticket report</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="fw-bold text-secondary text-center badge bg-light ">
-                        DEFAULT
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                        <div class="">
+                          <div class="form-check d-flex align-items-center gap-3">
+                            <input class="form-check-input rounded-circle" type="checkbox" name="flexRadioDefault"
+                              id="flexRadioDefault1">
+                            <label class="form-check-label fw-bold" for="flexRadioDefault1">
+                              Create new ticket example
+                            </label>
 
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="fw-bold text-white badge bg-success align-middle">NEW</div>
+                      </td>
+                    </tr>
+                    <tr class="border-bottom border-white ">
+                      <td class="py-3 px-4">
+                        <div class="">
+                          <div class="form-check d-flex align-items-center gap-3">
+                            <input class="form-check-input rounded-circle" type="checkbox" name="flexRadioDefault"
+                              id="flexRadioDefault1" checked>
+                            <label class="form-check-label fw-bold" for="defaultCheck">
+                              Update ticket report
+                            </label>
+
+                          </div>
+                      </td>
+                      <td>
+                        <div class=" text-secondary text-center badge bg-light ">
+                          DEFAULT</div>
+              </div>
+              </td>
+              </tr>
+              </tbody>
+              </table>
             </div>
 
           </div>
-        </section>
 
       </div>
+      </section>
+
+    </div>
 
 
 

@@ -11928,4 +11928,10 @@ aside .nav-pills .nav-link.active .sidebar.collapsed span {
   gap: 30px !important;
 }
 
+.form-check-input.rounded-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
 /*# sourceMappingURL=style.css.map */

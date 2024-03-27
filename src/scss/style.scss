@@ -1,6 +1,7 @@
 // Variable overrides
 $primary: #3751FF;
 $light: #F7F8FC;
+// $secondary: #F0F1F7;
 $color-gray-dark-text: #9FA2B4;
 $color-gray-dark-bg: #DDE2FF;
 $font-family-sans-serif: "Mulish", sans-serif;
@@ -115,4 +116,8 @@ aside .nav-pills .nav-link.active .sidebar.collapsed span {
     width: 20px;
     height: 20px;
     border-radius: 50%;
+}
+
+.table {
+    margin-bottom: 0;
 }

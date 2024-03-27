@@ -238,7 +238,7 @@
         </div>
 
         <!-- chart and chart info -->
-        <div class="rounded-md border mt-3 d-flex flex-column flex-sm-row justify-content-between bg-white rounded">
+        <section class="rounded-md border mt-3 d-flex flex-column flex-sm-row bg-white rounded">
           <!-- chart -->
 
           <div class="col-12 col-md-8 p-4">
@@ -250,194 +250,193 @@
           </div>
 
           <!-- Chart info -->
-
-          <div class="d-flex gap-3 flex-sm-column">
-            <div class="card text-center ">
-              <div class="card-body">
-                <h6 class="card-title fw-bold text-secondary ">Resolved</h6>
-                <h4 class="fw-bold">449</h4>
+          <div class="hstack gap-5 ml-auto">
+            <div class="vr"></div>
+            <div class="d-flex p-2 gap-3 flex-sm-column">
+              <div class="card text-center ">
+                <div class="card-body">
+                  <h6 class="card-title fw-bold text-secondary ">Resolved</h6>
+                  <h4 class="fw-bold">449</h4>
+                </div>
               </div>
-            </div>
 
-            <div class="card text-center">
-              <div class="card-body">
-                <h6 class="card-title fw-bold text-secondary ">Received</h6>
-                <h4 class="fw-bold">426</h4>
+              <div class="card text-center">
+                <div class="card-body">
+                  <h6 class="card-title fw-bold text-secondary ">Received</h6>
+                  <h4 class="fw-bold">426</h4>
+                </div>
               </div>
-            </div>
 
-            <div class="card text-center">
-              <div class="card-body">
-                <h6 class="card-title fw-bold text-secondary ">Average first response time</h6>
-                <h4 class="fw-bold">33m</h4>
+              <div class="card text-center">
+                <div class="card-body">
+                  <h6 class="card-title fw-bold text-secondary ">Average first response time</h6>
+                  <h4 class="fw-bold">33m</h4>
+                </div>
               </div>
-            </div>
 
-            <div class="card text-center">
-              <div class="card-body">
-                <h6 class="card-title fw-bold text-secondary ">Average response time</h6>
-                <h4 class="fw-bold">3h 8m</h4>
+              <div class="card text-center">
+                <div class="card-body">
+                  <h6 class="card-title fw-bold text-secondary ">Average response time</h6>
+                  <h4 class="fw-bold">3h 8m</h4>
+                </div>
               </div>
-            </div>
 
-            <div class="card text-center">
-              <div class="card-body">
-                <h6 class="card-title fw-bold text-secondary ">Resolution within SLA</h6>
-                <h4 class="fw-bold">94%</h4>
+              <div class="card text-center">
+                <div class="card-body">
+                  <h6 class="card-title fw-bold text-secondary ">Resolution within SLA</h6>
+                  <h4 class="fw-bold">94%</h4>
+                </div>
               </div>
+
+
+
             </div>
-
-
-
           </div>
-        </div>
+        </section>
 
-        <div class="row">
-
-
+        <!-- Unresolved tickets and tasks -->
+        <section class="d-flex mt-4 justify-content-between gap-5">
           <div class="column">
             <!-- Unresolved Tickets -->
-            <div class="container details-card">
-              <div class="pt-4 bg-white rounded border ">
-                <div class="d-flex px-3 pb-5 mb-3 justify-content-between border-bottom border-light">
-                  <div>
-                    <h5 class="mb-1 fw-bold">Unresolved Tickets</h5>
-                    <span class="text-muted">Group: <strong class="text-dark">Support</strong></span>
-                  </div>
-                  <div>
-                    <button class="btn btn-sm text-primary fw-bold">View details</button>
-                  </div>
+            <div class="pt-4 bg-white rounded border ">
+              <div class="d-flex px-3 pb-2 mb-2 justify-content-between border-bottom border-light">
+                <div>
+                  <h5 class="mb-1 fw-bold">Unresolved Tickets</h5>
+                  <span class="text-muted">Group: <strong class="text-dark">Support</strong></span>
                 </div>
-
-                <div class="table-responsive">
-                  <table class="table">
-                    <thead>
-                      <tr class="text-secondary"></tr>
-                    </thead>
-                    <tbody>
-                      <tr class="border ">
-                        <td class="py-3 px-4">
-                          <div class="d-flex align-items-center">
-                            <div>
-                              <p class="mb-0 fw-bold">Waiting on Feature Request</p>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="py-4 px-4 fw-bold text-secondary align-middle">4238</td>
-                      </tr>
-                      <tr>
-                        <td class="py-3 px-4">
-                          <div class="d-flex align-items-center">
-                            <div>
-                              <p class="mb-0 fw-bold">Awaiting Customer Response</p>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="py-4 px-4 fw-bold text-secondary align-middle">1005</td>
-                      </tr>
-                      <tr>
-                        <td class="py-3 px-4">
-                          <div class="d-flex align-items-center">
-                            <div>
-                              <p class="mb-0 fw-bold">Awaiting Developer Fix</p>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="py-4 px-4 fw-bold text-secondary align-middle">914</td>
-                      </tr>
-                      <tr>
-                        <td class="py-3 px-4">
-                          <div class="d-flex align-items-center">
-                            <div>
-                              <p class="mb-0 fw-bold">Pending</p>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="py-4 px-4 fw-bold text-secondary align-middle">281</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div>
+                  <button class="btn btn-sm text-primary fw-bold">View details</button>
                 </div>
               </div>
+
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr class="text-secondary"></tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border ">
+                      <td class="py-3 px-4">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <p class="mb-0 fw-bold">Waiting on Feature Request</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="py-4 px-4 fw-bold text-secondary align-middle">4238</td>
+                    </tr>
+                    <tr>
+                      <td class="py-3 px-4">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <p class="mb-0 fw-bold">Awaiting Customer Response</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="py-4 px-4 fw-bold text-secondary align-middle">1005</td>
+                    </tr>
+                    <tr>
+                      <td class="py-3 px-4">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <p class="mb-0 fw-bold">Awaiting Developer Fix</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="py-4 px-4 fw-bold text-secondary align-middle">914</td>
+                    </tr>
+                    <tr class="border-bottom border-white">
+                      <td class="py-3 px-4">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <p class="mb-0 fw-bold">Pending</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="py-4 px-4 fw-bold text-secondary align-middle text-right">281</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
+
           </div>
 
           <!-- Tasks -->
-          <div class="column">
-            <div class="container">
-              <div class="py-4 bg-white rounded border">
-                <div class="d-flex px-3 pb-5 mb-3 justify-content-between border-bottom border-light">
-                  <div>
-                    <h3 class="mb-1 fw-bold">Tasks</h3>
-                    <span class="text-muted">Today</span>
-                  </div>
-                  <div>
-                    <button class="btn btn-sm text-primary fw-bold">View all</button>
-                  </div>
+          <div class="column detail-cards">
+            <div class="pt-4 bg-white rounded border">
+              <div class="d-flex px-3 pb-2 mb-2 justify-content-between border-bottom border-light">
+                <div>
+                  <h5 class="mb-1 fw-bold">Tasks</h5>
+                  <span class="text-muted">Today</span>
                 </div>
-
-                <div class="table-responsive">
-                  <table class="table table-borderless table-striped" style="font-size: 12px; min-width: max-content;">
-                    <thead>
-                      <tr class="text-secondary"></tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="py-3 px-4">
-                          <div class="d-flex align-items-center">
-                            <div>
-                              <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                  id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                  Default radio
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="py-4 px-4 fw-bold text-secondary align-middle">12</td>
-                      </tr>
-                      <tr>
-                        <td class="py-3 px-4">
-                          <div class="d-flex align-items-center">
-                            <div class="form-check">
-                                <input class="form-check-input rounded-circle" type="checkbox" id="task1">
-                                <label class="form-check-label" for="task1">Finish ticket update</label>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="py-4 px-4 fw-bold text-secondary align-middle">12</td>
-                      </tr>
-                      <tr>
-                        <td class="py-3 px-4">
-                          <div class="d-flex align-items-center">
-                            <div class="form-check">
-                                <input class="form-check-input rounded-circle" type="checkbox" id="task2">
-                                <label class="form-check-label" for="task2">Create new ticket example</label>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="py-4 px-4 fw-bold text-secondary align-middle">12</td>
-                      </tr>
-                      <tr>
-                        <td class="py-3 px-4">
-                          <div class="d-flex align-items-center">
-                            <div class="form-check">
-                                <input class="form-check-input rounded-circle" type="checkbox" id="task3">
-                                <label class="form-check-label" for="task3">Update ticket report</label>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="py-4 px-4 fw-bold text-secondary align-middle">12</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div>
+                  <button class="btn btn-sm text-primary fw-bold">View all</button>
                 </div>
               </div>
+
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr class="text-secondary"></tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border ">
+                      <td class="py-3 px-4">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <p class="mb-0 fw-bold text-muted">Create new task</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <rect width="24" height="24" rx="8" fill="#F0F1F7" />
+                          <path d="M12 7V17" stroke="#9FA2B4" stroke-width="2" stroke-linecap="round" />
+                          <path d="M17 12L7 12" stroke="#9FA2B4" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="py-3 px-4">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <p class="mb-0 fw-bold">Finish ticket update</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="badge bg-warning text-white">URGENT</td>
+                    </tr>
+                    <tr>
+                      <td class="py-3 px-4">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <p class="mb-0 fw-bold">Create new ticket example</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="fw-bold text-white badge bg-success align-middle">NEW</td>
+                    </tr>
+                    <tr class="border-bottom border-white">
+                      <td class="py-3 px-4">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <p class="mb-0 fw-bold">Update ticket report</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="fw-bold text-secondary text-center badge bg-light ">
+                        DEFAULT
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
             </div>
+
           </div>
-        </div>
+        </section>
 
       </div>
 

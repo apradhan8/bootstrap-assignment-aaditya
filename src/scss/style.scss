@@ -1,5 +1,6 @@
 // Variable overrides
 $primary: #3751FF;
+$light: #F7F8FC;
 $color-gray-dark-text: #9FA2B4;
 $color-gray-dark-bg: #DDE2FF;
 $font-family-sans-serif: "Mulish", sans-serif;
@@ -21,12 +22,11 @@ $bg-dark: #363740;
 }
 
 aside {
-    width: max-content !important;
     height: 100%;
     padding: unset !important;
     background-color: $bg-dark;
     position: fixed;
-    max-width: 255px;
+    max-width: 255px !important;
     z-index: 1;
 }
 
@@ -40,25 +40,25 @@ aside .nav-pills .nav-link {
 
 aside .nav-pills .nav-link.active {
     fill: $nav-pills-active-color;
+
+    svg {
+        fill: $color-gray-dark-bg !important;
+    }
+
+    &:before {
+        position: absolute;
+        display: inline-block;
+        width: 3px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        content: "";
+        background-color: $color-gray-dark-bg;
+    }
 }
 
-aside .nav-pills .nav-link.active svg {
-    fill: $color-gray-dark-bg !important;
-}
 
-aside .nav-pills .nav-link.active::before {
-    position: absolute;
-    display: inline-block;
-    width: 3px;
-    height: 100%;
-    left: 0;
-    top: 0;
-    content: "";
-    background-color: $color-gray-dark-bg;
-}
-
-
-.sidebar.collapsed span {
+aside .nav-pills .nav-link.active .sidebar.collapsed span {
     display: none !important;
     margin-right: unset;
 }
@@ -76,6 +76,7 @@ aside .nav-pills .nav-link.active::before {
 
 .content {
     margin-left: 16.67%;
+
 }
 
 .content.collapsed {
@@ -94,14 +95,15 @@ aside .nav-pills .nav-link.active::before {
 
 
 
-.row {
-    display: flex;
-}
 
 .column {
     flex: 1;
-    margin-right: 25px; 
+
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
-.column:last-child {
-    margin-right: 0; }
+.gap-5 {
+    gap: 30px !important;
+}

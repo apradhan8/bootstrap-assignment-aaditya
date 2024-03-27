@@ -1,7 +1,7 @@
 // Variable overrides
 $primary: #3751FF;
 $light: #F7F8FC;
-// $secondary: #F0F1F7;
+$dark: #363740;
 $color-gray-dark-text: #9FA2B4;
 $color-gray-dark-bg: #DDE2FF;
 $font-family-sans-serif: "Mulish", sans-serif;
@@ -14,117 +14,85 @@ $text-secondary: $color-gray-dark-text;
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 
-$bg-dark: #363740;
-
+// Title Style override
 .logo-title {
     color: var(--color-gray-dark-text);
     font-weight: bold;
     margin-right: 40px;
 }
 
+// Sidebar 
 aside {
     width: max-content !important;
-    height: 100%;
     padding: unset !important;
-    background-color: $bg-dark;
-    position: fixed;
-    // max-width: 255px !important;
     z-index: 1;
-}
 
-aside .nav-pills .nav-link {
-    border-radius: 0;
-    padding: 18px 20px;
-    position: relative;
-    color: $nav-link-color;
-    fill: $color-gray-dark-text;
-}
-
-aside .nav-pills .nav-link.active {
-    fill: $nav-pills-active-color;
-
-    svg {
-        fill: $color-gray-dark-bg !important;
+    .nav-pills .nav-link {
+        border-radius: 0;
+        padding: 18px 20px;
+        position: relative;
+        color: $nav-link-color;
+        fill: $color-gray-dark-text;
     }
 
-    &:before {
-        position: absolute;
-        display: inline-block;
-        width: 3px;
-        height: 100%;
-        left: 0;
-        top: 0;
-        content: "";
-        background-color: $color-gray-dark-bg;
+    .nav-pills .nav-link.active {
+        fill: $nav-pills-active-color;
+
+        svg {
+            fill: $color-gray-dark-bg !important;
+        }
+
+        &:before {
+            position: absolute;
+            display: inline-block;
+            width: 3px;
+            height: 100%;
+            left: 0;
+            top: 0;
+            content: "";
+            background-color: $color-gray-dark-bg;
+        }
     }
+
 }
 
-
+// Hide the text when collapsed
 .sidebar.collapsed span {
-    // width: max-content !important;
     display: none !important;
     margin-right: unset;
 }
 
+// Spacing between logo and navlinks
 #nav-links {
     margin-top: 60px;
 }
 
-
+// Avatar
 .avatar {
     width: 44px;
     height: 44px;
     object-fit: cover;
 }
 
-@media screen and (min-width: 768px) {
-    .md-mx-6 {
-        margin-left: 16.67% !important;
-
-    }
-}
-
-
+// Content margin when collapsed
 .content.collapsed {
     margin-left: 10% !important;
 }
 
+// Card max width
 .card {
-    width: 100%;
-    flex-wrap: wrap;
     max-width: 258px !important;
     max-height: 134px !important;
 }
 
-
-
-
-
-.column {
-
-    &:last-child {
-        margin-right: 0;
-    }
-}
-
-.gap-5 {
-    gap: 40px !important;
-}
-
+// rounded circle checkboxes
 .form-check-input.rounded-circle {
     width: 20px;
     height: 20px;
     border-radius: 50%;
 }
 
+// Table margin override
 .table {
     margin-bottom: 0;
-}
-
-.chart {
-    width: 100%;
-}
-
-.chart-wrapper {
-    width: calc(100% - 40px) !important;
 }

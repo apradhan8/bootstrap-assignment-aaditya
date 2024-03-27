@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Dashboard</title>
-  <!-- Link to generated custom CSS -->
+  <title>Responsive Grid Layout</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <!-- Google Font CDN  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,31 +15,7 @@
 </head>
 
 <body>
-  <!-- Sidebar -->
-  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-    <symbol id="check2" viewBox="0 0 16 16">
-      <path
-        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
-    </symbol>
-    <symbol id="circle-half" viewBox="0 0 16 16">
-      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
-    </symbol>
-    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-      <path
-        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
-      <path
-        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
-    </symbol>
-    <symbol id="sun-fill" viewBox="0 0 16 16">
-      <path
-        d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
-    </symbol>
-
-  </svg>
-
-
-
-
+  <!-- svg definitions -->
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
 
     <symbol id="logo" viewBox="0 0 32 32">
@@ -87,10 +62,11 @@
     </symbol>
   </svg>
 
-  <main class="container-fluid">
-    <div class="row bg-light">
-      <!-- Sidebar -->
-      <aside class="col-xs-2 col-md-3 col-12">
+  <div class="container-fluid bg-light">
+    <div class="row">
+      <!-- Vertical Navbar -->
+      <aside class="col-md-2 col-sm-4 position-fixed top-0 bottom-0 start-0 z-1 bg-dark sidebar">
+        <!-- Navbar content here -->
         <nav class="sidebar">
           <a href="#" class="pt-5 px-1 d-flex align-items-center mb-3 me-md-auto text-white text-decoration-none mx-2"
             id="logo-btn">
@@ -176,127 +152,148 @@
           </ul>
         </nav>
       </aside>
-      <!-- Main content -->
-      <div class="col-xs-3 col-md-10 col-12 p-5 mx-4 md-mx-6 content">
+      <!-- Main Content Area -->
+      <main class="col-md-10 col-sm-8 offset-2 py-5">
+        <!-- Header Area -->
+        <div class="row">
+          <div class="col">
+            <!-- Header content here -->
+            <div class="d-flex justify-content-between">
+              <h1 class="fs-4 fw-bold ">Overview</h1>
+              <div>
+                <svg class="mx-2" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_584_242)">
+                    <circle cx="6.5" cy="6.5" r="5.75" stroke="#C5C7CD" stroke-width="1.5" />
+                    <path d="M11 11L15 15" stroke="#C5C7CD" stroke-width="1.5" stroke-linecap="round" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_584_242">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
 
-        <!-- nav with profile -->
-        <div class="d-flex justify-content-between">
-          <h1 class="fs-4 fw-bold ">Overview</h1>
-          <div>
-            <svg class="mx-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_584_242)">
-                <circle cx="6.5" cy="6.5" r="5.75" stroke="#C5C7CD" stroke-width="1.5" />
-                <path d="M11 11L15 15" stroke="#C5C7CD" stroke-width="1.5" stroke-linecap="round" />
-              </g>
-              <defs>
-                <clipPath id="clip0_584_242">
-                  <rect width="16" height="16" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
+                <svg class="mx-2" width="18" height="19" viewBox="0 0 18 19" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.99999 19C9.10374 19 9.99905 18.1047 9.99905 17H6.00093C6.00093 18.1047 6.89624 19 7.99999 19ZM14.7309 14.3216C14.1272 13.6728 12.9975 12.6969 12.9975 9.5C12.9975 7.07188 11.295 5.12812 8.99937 4.65125V4C8.99937 3.44781 8.55187 3 7.99999 3C7.44812 3 7.00062 3.44781 7.00062 4V4.65125C4.70499 5.12812 3.00249 7.07188 3.00249 9.5C3.00249 12.6969 1.8728 13.6728 1.26905 14.3216C1.08155 14.5231 0.998429 14.7641 0.999991 15C1.00343 15.5125 1.40562 16 2.00312 16H13.9969C14.5944 16 14.9969 15.5125 15 15C15.0016 14.7641 14.9184 14.5228 14.7309 14.3216Z"
+                    fill="#C5C7CD" />
+                  <circle cx="13" cy="5" r="3.75" fill="#3751FF" stroke="#F7F8FC" stroke-width="1.5" />
+                </svg>
+                <span class="text-dark"> | </span>
+                <span class="mx-2 fw-semibold d-none d-sm-inline-block">Jones Ferdinand</span>
 
-            <svg class="mx-2" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M7.99999 19C9.10374 19 9.99905 18.1047 9.99905 17H6.00093C6.00093 18.1047 6.89624 19 7.99999 19ZM14.7309 14.3216C14.1272 13.6728 12.9975 12.6969 12.9975 9.5C12.9975 7.07188 11.295 5.12812 8.99937 4.65125V4C8.99937 3.44781 8.55187 3 7.99999 3C7.44812 3 7.00062 3.44781 7.00062 4V4.65125C4.70499 5.12812 3.00249 7.07188 3.00249 9.5C3.00249 12.6969 1.8728 13.6728 1.26905 14.3216C1.08155 14.5231 0.998429 14.7641 0.999991 15C1.00343 15.5125 1.40562 16 2.00312 16H13.9969C14.5944 16 14.9969 15.5125 15 15C15.0016 14.7641 14.9184 14.5228 14.7309 14.3216Z"
-                fill="#C5C7CD" />
-              <circle cx="13" cy="5" r="3.75" fill="#3751FF" stroke="#F7F8FC" stroke-width="1.5" />
-            </svg>
-            <span class="text-dark"> | </span>
-            <span class="mx-2 fw-semibold d-none d-sm-inline-block">Jones Ferdinand</span>
-
-            <a href="#"><img src="assets/images/avatar.png" alt="profile photo of user"
-                class="rounded-circle p-1 border avatar"></a>
-          </div>
-        </div>
-
-        <!-- statistics cards  -->
-        <div class="d-flex mt-5 flex-wrap justify-content-between gap-3 flex-md-row">
-          <div class="card text-center bg-white">
-            <div class="card-body">
-              <h6 class="card-title fw-bold text-secondary ">Unresolved</h6>
-              <h1 class="fw-bold">60</h1>
-            </div>
-          </div>
-          <div class="card text-center">
-            <div class="card-body">
-              <h6 class="card-title fw-bold text-primary">Overdue</h6>
-              <h1 class="fw-bold text-primary">16</h1>
-            </div>
-          </div>
-          <div class="card text-center">
-            <div class="card-body">
-              <h6 class="card-title fw-bold text-secondary">Open</h6>
-              <h1 class="fw-bold">43</h1>
-            </div>
-          </div>
-          <div class="card text-center">
-            <div class="card-body">
-              <h6 class="card-title fw-bold text-secondary">On hold</h6>
-              <h1 class="fw-bold">64</h1>
+                <a href="#"><img src="assets/images/avatar.png" alt="profile photo of user"
+                    class="rounded-circle p-1 border avatar"></a>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- chart and chart info -->
-        <section class="w-100 rounded border mt-3 d-flex flex-column flex-lg-row justify-content-lg-between bg-white">
-          <!-- chart -->
-
-          <div class="p-4 py-md-5 chart-wrapper">
-            <h5 class="fw-bold">Today's trends</h5>
-            <p class="text-secondary"> as of 26th March 2024, 10:53AM</p>
-            <!-- <div class="chart"> -->
+        <!-- Cards -->
+        <div class="row mt-4 mb-4">
+          <div class="col">
+            <div class="card text-center bg-white">
+              <div class="card-body">
+                <h6 class="card-title fw-bold text-secondary ">Unresolved</h6>
+                <h1 class="fw-bold">60</h1>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-center bg-white">
+              <div class="card-body">
+                <h6 class="card-title fw-bold text-secondary ">Overdue</h6>
+                <h1 class="fw-bold">16</h1>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-center bg-white">
+              <div class="card-body">
+                <h6 class="card-title fw-bold text-secondary ">Open</h6>
+                <h1 class="fw-bold">43</h1>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-center bg-white">
+              <div class="card-body">
+                <h6 class="card-title fw-bold text-secondary ">On hold</h6>
+                <h1 class="fw-bold">64</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Graph and Graph Data Area -->
+        <div class="row bg-white rounded mb-4">
+          <!-- Graph Area -->
+          <div class="col-lg-8">
+            <!-- Graph content here -->
+            <div class="pt-4">
+              <h5 class="fw-bold">Today's trends</h5>
+              <p class="text-secondary"> as of 26th March 2024, 10:53AM</p>
+            </div>
             <div class="chart"></div>
           </div>
-
-          <!-- Chart info -->
-          <div class="d-flex flex-column flex-lg-row justify-content-lg-between">
-            <!-- divider -->
-            <!-- <div class="vr d-none d-lg-block"></div> -->
-            <!-- info cards -->
-            <div class="w-50 d-flex flex-wrap p-2 gap-3 justify-content-center justify-content-md-start">
-
-              <div class="card text-center">
-                <div class="card-body">
+          <!-- Graph Data Area -->
+          <div class="col-lg-4 border-start d-flex flex-column justify-content-center">
+            <!-- Data content here -->
+            <div class="row">
+              <div class="col border-bottom p-4 ">
+                <!-- Data rows here -->
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
                   <h6 class="card-title fw-bold text-secondary ">Resolved</h6>
                   <h4 class="fw-bold">449</h4>
                 </div>
               </div>
+            </div>
 
-              <div class="card text-center">
-                <div class="card-body">
+            <div class="row">
+              <div class="col border-bottom p-4">
+                <!-- Data rows here -->
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
                   <h6 class="card-title fw-bold text-secondary ">Received</h6>
                   <h4 class="fw-bold">426</h4>
                 </div>
               </div>
+            </div>
 
-              <div class="card text-center">
-                <div class="card-body">
+            <div class="row">
+              <div class="col border-bottom border-left p-4">
+                <!-- Data rows here -->
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
                   <h6 class="card-title fw-bold text-secondary ">Average first response time</h6>
                   <h4 class="fw-bold">33m</h4>
                 </div>
               </div>
-
-              <div class="card text-center">
-                <div class="card-body">
-                  <h6 class="card-title fw-bold text-secondary ">Average response time</h6>
-                  <h4 class="fw-bold">3h 8m</h4>
-                </div>
-              </div>
-
-              <div class="card text-center">
-                <div class="card-body">
+            </div>
+            <div class="row">
+              <div class="col border-bottom p-4">
+                <!-- Data rows here -->
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
                   <h6 class="card-title fw-bold text-secondary ">Resolution within SLA</h6>
                   <h4 class="fw-bold">94%</h4>
                 </div>
               </div>
             </div>
+            <div class="row">
+              <div class="col p-4">
+                <!-- Data rows here -->
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                  <h6 class="card-title fw-bold text-secondary ">Resolved</h6>
+                  <h4 class="fw-bold">449</h4>
+                </div>
+              </div>
+            </div>
           </div>
-        </section>
-
-        <!-- Unresolved tickets and tasks -->
-        <section class="d-flex mt-4 gap-5 flex-column flex-md-row">
-          <div class="column">
-            <!-- Unresolved Tickets -->
+        </div>
+        <!-- Info and ToDo Areas -->
+        <div class="row">
+          <!-- Info Area -->
+          <div class="col-md-6 mb-4">
+            <!-- Info content here -->
             <div class="pt-4 bg-white rounded border ">
               <div class="d-flex px-3 pb-2 mb-2 justify-content-between border-bottom border-light">
                 <div>
@@ -352,17 +349,17 @@
                           </div>
                         </div>
                       </td>
-                      <td class="py-4 px-4 fw-bold text-secondary align-middle text-right">281</td>
+                      <td class="py-4 px-4 fw-bold text-secondary align-middle text-right">281
+                      </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
-
           </div>
-
-          <!-- Tasks Panel -->
-          <div class="column detail-cards">
+          <!-- ToDo Area -->
+          <div class="col-md-6">
+            <!-- ToDo content here -->
             <div class="pt-4 bg-white rounded border">
               <div class="d-flex px-3 pb-2 mb-2 justify-content-between border-bottom border-light">
                 <div>
@@ -427,7 +424,8 @@
                         </div>
                       </td>
                       <td>
-                        <div class="fw-bold text-white badge bg-success align-middle">NEW</div>
+                        <div class="fw-bold text-white badge bg-success align-middle">NEW
+                        </div>
                       </td>
                     </tr>
                     <tr class="border-bottom border-white ">
@@ -451,24 +449,11 @@
               </tbody>
               </table>
             </div>
-
           </div>
-
-      </div>
-      </section>
-
+        </div>
     </div>
-
-
-
-    </div>
-  </main>
-
-
-
-
-
-
+  </div>
+  </div>
 
 
   <!-- Bootstrap JS -->

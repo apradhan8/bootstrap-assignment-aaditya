@@ -4,17 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const expandButton = document.getElementById('logo-btn');
     const sidebarLinks = document.querySelectorAll('.nav-link');
     const mainContent = document.querySelector('.content');
-    const mediaQueryList = window.matchMedia('(max-width: 992px)');
 
-    mediaQueryList.addEventListener('change', function (event) {
-        if (event.matches) {
-            sidebar.classList.add('collapsed');
-            mainContent.classList.add('collapsed');
-        } else {
-            sidebar.classList.remove('collapsed');
-            mainContent.classList.remove('collapsed');
-        }
-    })
 
     sidebarLinks.forEach(function (link) {
         link.addEventListener('click', function () {
@@ -71,11 +61,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 x: 0,
                 y: 35
             }, {
-                x: 4.5,
-                y: 22
-            }, {
                 x: 5,
-                y: 28
+                y: 20
             }, {
                 x: 8,
                 y: 32
@@ -84,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 y: 18
             }, {
                 x: 15.5,
-                y: 42
+                y: 37
             },
             {
                 x: 16.5,
@@ -92,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             {
                 x: 19,
-                y: 36
+                y: 33
             },
             ],
 
@@ -149,13 +136,14 @@ document.addEventListener('DOMContentLoaded', function () {
             type: "gradient",
             gradient: {
                 shadeIntensity: 1,
-                inverseColors: !1,
-                opacityFrom: .12,
+                inverseColors: false,
+                opacityFrom: .15,
                 opacityTo: 0,
-                stops: [0, 90, 100]
+                stops: [0, 90, 100],
+                type: "horizontal",
             }
         },
-        colors: ["var(--bs-primary)", "var(--bs-gray-400)"],
+        colors: ["var(--bs-primary)", "var(--bs-gray-300)"],
 
         tooltip: {
             theme: "dark",

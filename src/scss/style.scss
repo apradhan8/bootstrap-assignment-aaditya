@@ -22,11 +22,12 @@ $bg-dark: #363740;
 }
 
 aside {
+    width: max-content !important;
     height: 100%;
     padding: unset !important;
     background-color: $bg-dark;
     position: fixed;
-    max-width: 255px !important;
+    // max-width: 255px !important;
     z-index: 1;
 }
 
@@ -59,6 +60,7 @@ aside .nav-pills .nav-link.active {
 
 
 aside .nav-pills .nav-link.active .sidebar.collapsed span {
+    // width: max-content !important;
     display: none !important;
     margin-right: unset;
 }
@@ -84,6 +86,7 @@ aside .nav-pills .nav-link.active .sidebar.collapsed span {
 }
 
 .card {
+    flex: 1;
     max-width: 258px;
     max-height: 134px;
 }
@@ -105,5 +108,5 @@ aside .nav-pills .nav-link.active .sidebar.collapsed span {
 }
 
 .gap-5 {
-    gap: 30px !important;
+    gap: 40px !important;
 }

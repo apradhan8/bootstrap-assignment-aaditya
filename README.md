@@ -4,8 +4,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/Nabin-me/bootstrap-assignment">
+    <img src="src/assets/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Responsive Admin Dashboard UI</h3>

@@ -1,7 +1,7 @@
 {
   "name": "bootstrap-assignment",
   "version": "1.0.0",
-  "description": "Created by Nabin & Aaditya ",
+  "description": "Created by Aaditya",
   "main": "index.js",
   "scripts": {
     "dev": "lite-server --baseDir=\"src\"",
@@ -9,7 +9,7 @@
     "start": "concurrently \"npm run watch\" \"npm run dev\""
   },
   "keywords": [],
-  "author": "Nabin",
+  "author": "Aaditya",
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.6.1",

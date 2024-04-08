@@ -1,14 +1,113 @@
 
 
-
-
-
 // JavaScript to handle sidebar toggling
 document.addEventListener('DOMContentLoaded', function () {
     const sidebarLinks = document.querySelectorAll('.nav-link');
     const cards = document.querySelectorAll('.toggle-cards');
+    const cardContainer = document.getElementById('cardContainer');
+    const graphArea = document.getElementById('graphAreaContainer');
+    const graphDataArea = document.getElementById('graphDataAreaContainer');
+    
+    
+
+    // Import the json and convert to json object
+    async function getJson() {
+        try {
+            const response = await fetch('../JSON/data.json');
+            const data = await response.json();
+            
+            
+            data.cards.forEach(function (card) {
+               const wrapperDiv =  document.createElement('div');
+                wrapperDiv.classList.add('col');
+                
+                const cardWrapper = document.createElement('div');
+                cardWrapper.classList.add('card', 'text-center', 'bg-white', 'cursor-pointer');
+
+                const cardBody = document.createElement('div');
+                cardBody.classList.add('card-body', 'toggle-cards');
+                cardBody.setAttribute('onclick', 'toggleActive(this)');
+
+                const cardTitle = document.createElement('h6');
+                cardTitle.classList.add('card-title', 'fw-bold', 'text-secondary');
+                cardTitle.textContent = card.title;
+
+                const cardValue = document.createElement('h1');
+                cardValue.classList.add('fw-bold');
+                cardValue.textContent = card.count;
+                
+                cardBody.appendChild(cardTitle);
+                cardBody.appendChild(cardValue);
+                cardWrapper.appendChild(cardBody);
+                wrapperDiv.appendChild(cardWrapper);
+                cardContainer.appendChild(wrapperDiv);
+
+            });
+
+            
+            // Render the chartArea
+            
+            const titleWrapper = document.createElement('div');
+            titleWrapper.classList.add('pt-4');
+
+            const title = document.createElement('h5');
+            title.classList.add('fw-bold');
+            title.textContent = data.graph.trendstitle;
+
+            const subTitle = document.createElement('p');
+            subTitle.classList.add('text-secondary');
+            subTitle.textContent = data.graph.timestamp;
+
+            titleWrapper.appendChild(title);
+            titleWrapper.appendChild(subTitle);
+            graphArea.appendChild(titleWrapper);
+
+             
+            const chartArea = document.createElement('div');
+            chartArea.classList.add('chart');
+            graphArea.appendChild(chartArea);    
+            
+            const chart = new ApexCharts(document.querySelector(".chart"), options);
+            chart.render();
 
 
+            data.graph_data.forEach(function (graphData, index) {
+                const rowWrapper = document.createElement('div');
+                rowWrapper.classList.add('row');
+
+                const colWrapper = document.createElement('div');
+                colWrapper.classList.add('col', 'border-bottom','p-4');
+                if (index == data.graph_data.length - 1) {
+                    colWrapper.classList.remove('border-bottom');
+                }
+                
+
+                const cardBody = document.createElement('div');
+                cardBody.classList.add('card-body', 'd-flex', 'flex-column', 'justify-content-center', 'align-items-center');
+
+                const cardTitle = document.createElement('h6');
+                cardTitle.classList.add('card-title', 'fw-bold', 'text-secondary');
+                cardTitle.textContent = graphData.title;
+
+                const cardValue = document.createElement('h4');
+                cardValue.classList.add('fw-bold');
+                cardValue.textContent = graphData.count || graphData.value || graphData.percentage;
+
+                cardBody.appendChild(cardTitle);
+                cardBody.appendChild(cardValue);
+                colWrapper.appendChild(cardBody);
+                rowWrapper.appendChild(colWrapper);
+                graphDataArea.appendChild(rowWrapper);
+            });
+
+           
+        }
+        catch (error) {
+            console.error('error: ',error);
+        }
+        
+    }
+    getJson();
 
     // Add active class to clicked sidebar link
     sidebarLinks.forEach(function (link) {
@@ -203,7 +302,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
     };
-    const chart = new ApexCharts(document.querySelector(".chart"), options);
-    chart.render();
+
 });
 

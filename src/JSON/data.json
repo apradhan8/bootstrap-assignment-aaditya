@@ -48,43 +48,46 @@
       }
     ],
     "tickets": {
-      "unresolved": {
-        "group": "Support",
-        "categories": [
-          {
-            "category": "Waiting on Feature Request",
-            "count": 4238
-          },
-          {
-            "category": "Awaiting Customer Response",
-            "count": 1005
-          },
-          {
-            "category": "Awaiting Developer Fix",
-            "count": 914
-          },
-          {
-            "category": "Pending",
-            "count": 281
-          }
-        ]
-      }
+      "title": "Unresolved Tickets",
+      "group": "Support",
+      "button": "View Details",
+      "categories": [
+        {
+          "title": "Waiting on Feature Request",
+          "count": 4238
+        },
+        {
+          "title": "Awaiting Customer Response",
+          "count": 1005
+        },
+        {
+          "title": "Awaiting Developer Fix",
+          "count": 914
+        },
+        {
+          "title": "Pending",
+          "count": 281
+        }
+      ]
     },
     "tasks": {
-      "today": [
-        {
-          "task": "Finish ticket update",
+      "title": "Tasks",
+      "time": "Today",
+      "button": "View All",
+
+       "todo": [{
+          "taskname": "Finish ticket update",
           "status": "URGENT"
         },
         {
-          "task": "Create new ticket example",
+          "taskname": "Create new ticket example",
           "status": "NEW"
         },
         {
-          "task": "Update ticket report",
+          "taskname": "Update ticket report",
           "status": "DEFAULT"
         }
-      ]
+       ]
     }
   }
   
